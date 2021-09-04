@@ -1,0 +1,22 @@
+
+#conjunto_productos{
+    display: flex;
+    flex-wrap: wrap;
+    .productos{
+        background-color: antiquewhite;
+        border: 1px solid whitesmoke;
+        border-radius: 5px;
+        margin: 20px;
+        text-align: center;
+        width: 150px;
+        flex-basis: 20%;
+        box-shadow: 0px 0px 4px navy;
+        transition: all 300ms;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .productos:hover{
+        transform: scale(1.1);
+    }
+}
