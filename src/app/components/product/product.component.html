@@ -1,6 +1,8 @@
-<h2>{{product.title}}</h2>
-<img src="{{product.image}}" alt="" width="100px">
-<h4>{{product.price}}</h4>
+<h2>{{ product.title | uppercase }}</h2>
+<img src="{{product.image}}" alt="">
+<h4 appHighlight="product.price<8000">{{product.price  | exponential | currency }}</h4>
+
+<p>{{product.description | slice:0:10}}</p>
 
 <button (click)="addCart()">Agregar al carrito</button>
-<button (click)="ngOnDestroy()">Eliminar producto</button>
+<button (click)="ngOnDestroy()">Eliminar producto</button> 

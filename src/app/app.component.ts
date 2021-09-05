@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { Product } from './modules/product';
+import { SumaPipePipe } from './pipes/suma/suma-pipe.pipe';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
+  numero1: number;
+  numero2: number;
   title = 'arbol-store';
   items=["pepe", "pizza", "milk"]; 
   objetoPrueba:any={
@@ -20,35 +23,35 @@ export class AppComponent implements OnInit{
       id: '1',
       image: 'assets/images/camiseta.png',
       title: 'Camiseta',
-      price: 80000,
+      price: 10000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '2',
       image: 'assets/images/hoodie.png',
       title: 'Hoodie',
-      price: 80000,
+      price: 20000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '3',
       image: 'assets/images/mug.png',
       title: 'Mug',
-      price: 80000,
+      price: 50000,
       description: 'bla bla bla bla bla'
     },
     {
       id: '4',
       image: 'assets/images/pin.png',
       title: 'Pin',
-      price: 80000,
+      price: 800,
       description: 'bla bla bla bla bla'
     },
     {
       id: '5',
       image: 'assets/images/stickers1.png',
       title: 'Stickers',
-      price: 80000,
+      price: 8550,
       description: 'bla bla bla bla bla'
     },
     {

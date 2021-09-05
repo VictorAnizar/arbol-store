@@ -1,3 +1,14 @@
+<h2>Sumando dos numeros</h2>
+<div id="sumas">
+  <label for="numero1"></label>
+  <input type="number" name="numero1" [(ngModel)]="numero1" [min]=0>
+  <h3>+</h3>
+  <label for="numero2"></label>
+  <input type="number" name="numero2" [(ngModel)]="numero2" [min]=0>
+  <h3>=</h3>
+  <p>{{numero1 | sumaPipe: numero2}}</p>
+</div>
+<hr>
 <h1>Cambiando titulo</h1>
 <input type="text" [(ngModel)]="title">
 {{ title }}
@@ -6,15 +17,15 @@
   Div
 </div>
 <div [ngSwitch]="title">
-    <p *ngSwitchCase="'pizza'">Una pizza</p>
-    <p *ngSwitchCase="'arepa'">Una arepa</p>
-    <p *ngSwitchCase="'elote'">Un elote</p>
-    <p *ngSwitchDefault>No hay match</p>
+  <p *ngSwitchCase="'pizza'">Una pizza</p>
+  <p *ngSwitchCase="'arepa'">Una arepa</p>
+  <p *ngSwitchCase="'elote'">Un elote</p>
+  <p *ngSwitchDefault>No hay match</p>
 </div>
 
 <hr>
 <h1>Mostrando arreglo</h1>
- <h2>Agregar item</h2>
+<h2>Agregar item</h2>
 <button type="submit" (click)="addItem()">Agregar elemento al arreglo</button>
 
 <ul>
@@ -28,19 +39,17 @@
 <h1>Mostrando objeto</h1>
 <div *ngIf="objetoPrueba">
   <ul>
-    <li >
-     {{objetoPrueba | json }}
+    <li>
+      {{objetoPrueba | json }}
     </li>
   </ul>
 </div>
 
-<div id="conjunto_productos">
-  <div class="productos" *ngFor="let i of products">
-    <!-- <h2>{{i.title}}</h2>
+<div class="product-grid">
+  <!-- <h2>{{i.title}}</h2>
     <img src="{{i.image}}" alt="" width="100px">
     <h4>{{i.price}}</h4> -->
-    <app-product (productClicked)="clickProduct($event)" [product]="i"></app-product>
-  </div>
+  <app-product *ngFor="let i of products" (productClicked)="clickProduct($event)" [product]="i"></app-product>
 </div>
 <hr>
 <h3>
