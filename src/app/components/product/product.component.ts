@@ -3,7 +3,6 @@ import { Input } from '@angular/core';
 import { Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import { Product } from '../../modules/product';
-import { ExponentialPipe } from 'src/app/pipes/exponential/exponential.pipe';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -36,6 +35,8 @@ export class ProductComponent implements DoCheck, OnInit, OnDestroy{
     console.log("Añadido al carrito");
     this.productClicked.emit(this.product.id);
   }
+
+ 
 
   
 }

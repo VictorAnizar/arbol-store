@@ -33,7 +33,7 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": ["node_modules/swiper/swiper.scss",
               "src/styles.scss"
             ],
             "scripts": []

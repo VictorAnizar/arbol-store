@@ -1,0 +1,40 @@
+*{
+    margin: 5px;
+    padding: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.titulo-servicio{
+    text-align: center;
+    background-color: azure;
+    box-shadow: 0px 0px 3px gray;
+}
+.descripcion-servicio{
+    text-align: justify;
+    transition: all 300ms;
+
+}
+.boton-details{
+    display: none;
+    font-family: cursive;
+    transition: all 300ms;
+    width: 98.4%;
+    height: 75%;
+    font-size: 20px;
+}
+:host{
+    transition: all 300ms;
+}
+:host:hover{
+    .descripcion-servicio{
+        display: none;
+    }
+    .boton-details{
+        display: block;
+        transition: all 300ms;
+    }
+    .boton-details:hover{
+        cursor: pointer;
+        background-color: gainsboro;
+    }
+    transform: scale(1.1);
+}

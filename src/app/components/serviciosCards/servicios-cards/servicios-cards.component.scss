@@ -1,0 +1,18 @@
+h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: gainsboro;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.servicios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    app-servicio-card{
+        margin: 10px;
+        box-shadow: 0px 0px 4px gray;
+    }
+}
