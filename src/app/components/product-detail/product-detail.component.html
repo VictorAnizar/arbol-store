@@ -1,8 +1,11 @@
-<img src="{{productoAttr.image}}" alt="" width="250px">
-<div>
-    <ul>
-        <li>Nombre: {{productoAttr.title}}</li>
-        <li>Precio: {{productoAttr.price}} </li>
-        <li>Descripción: {{productoAttr.description}}</li>
-    </ul>
+<div class="general-container-product">
+
+    <div class="section-image">
+        <img src="{{productoAttr.image}}" alt="" width="250px">
+    </div>
+    <div class="section-info">
+        <h1>{{productoAttr.title}}</h1>
+        <h3>{{productoAttr.price | currency}}</h3>
+        <h3>{{productoAttr.description}}</h3>
+    </div>
 </div>

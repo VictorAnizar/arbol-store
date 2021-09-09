@@ -1,14 +1,17 @@
 .active{
     text-decoration: underline;
-    color: black !important;
+    color: gray !important;
 }
 #header{
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     padding: 10px;
+    background-color: rgb(47, 47, 47);
     #logo{
+        background: radial-gradient(closest-side, whitesmoke, #ebf8e1, rgb(47, 47, 47));
+        border-radius: 100%;
+        padding: 20px;
         flex-basis: 5%;
         img{
             width: 100%;
@@ -21,19 +24,22 @@
     #menu{
         flex-basis: 80%;
         display: flex;
-        justify-content: center;
+        justify-content: right;
         align-items: center;
         list-style: none;
         li{
             transition: all 200ms;
             margin: 10px;
             a{
-                color: cadetblue;
-                font-family: 20px;
-                text-decoration: none;
+                color: white;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 20px;
+                margin: 5px;
+                padding: 5px;
+                border-radius: 5px;
                 display: block;
-                width: 100%;
-                height: 100%;
+                text-decoration: none;
+                transition: all 300ms;
             }
         }
         li:hover{
