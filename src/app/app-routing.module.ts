@@ -8,17 +8,23 @@ import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/p
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { ServiciosCardsComponent } from './components/serviciosCards/servicios-cards/servicios-cards.component';
 import { ServicioDetailComponent } from './components/servicio-detail/servicio-detail/servicio-detail.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch:'full' },
-  {path: 'home', component: HomeComponent},
-  {path: 'products', component: ProductsComponent},
-  {path: 'products/:id', component: ProductDetailComponent},
-  {path: 'servicios', component: ServiciosCardsComponent },
-  {path: 'servicios/:id', component: ServicioDetailComponent},
-  {path: 'contact', component: ContactComponent},
-  {path: 'pruebas', component: PruebasComponent},
-  {path: '**', component: PaginaNoEncontradaComponent}
+  {
+    path: '', component: LayoutComponent , children: [
+      {path: '', redirectTo: '/home', pathMatch: 'full'},
+      { path: 'home', component: HomeComponent },
+      { path: 'products', component: ProductsComponent },
+      { path: 'products/:id', component: ProductDetailComponent },
+      { path: 'servicios', component: ServiciosCardsComponent },
+      { path: 'servicios/:id', component: ServicioDetailComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'pruebas', component: PruebasComponent },
+      { path: '**', component: PaginaNoEncontradaComponent }
+    ]
+  },
+
 ];
 
 @NgModule({

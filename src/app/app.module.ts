@@ -20,6 +20,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { ServicioCardComponent } from './components/servicioCard/servicio-card/servicio-card.component';
 import { ServiciosCardsComponent } from './components/serviciosCards/servicios-cards/servicios-cards.component';
 import { ServicioDetailComponent } from './components/servicio-detail/servicio-detail/servicio-detail.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ServicioDetailComponent } from './components/servicio-detail/servicio-d
     ProductDetailComponent,
     ServicioCardComponent,
     ServiciosCardsComponent,
-    ServicioDetailComponent
+    ServicioDetailComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
