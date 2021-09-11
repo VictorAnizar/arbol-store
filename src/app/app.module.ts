@@ -17,9 +17,9 @@ import { FooterComponent } from './components/footer/footer.component';
 //import { BannerComponent } from './components/banner/banner.component';
 import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { ServicioCardComponent } from './components/servicio-card/servicio-card.component';
-import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
-import { ServicioDetailComponent } from './components/servicio-detail/servicio-detail.component';
+//import { ServicioCardComponent } from './components/servicios-cards/components/servicio-card/servicio-card.component';
+//import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
+//import { ServicioDetailComponent } from './components/servicio-detail/servicio-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
@@ -39,9 +39,9 @@ import { LayoutComponent } from './components/layout/layout.component';
     //BannerComponent,
     PaginaNoEncontradaComponent,
     ProductDetailComponent,
-    ServicioCardComponent,
-    ServiciosCardsComponent,
-    ServicioDetailComponent,
+    //ServicioCardComponent,
+    //ServiciosCardsComponent,
+    //ServicioDetailComponent,
     LayoutComponent
   ],
   imports: [
