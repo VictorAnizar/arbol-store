@@ -52,7 +52,7 @@
   <!-- <h2>{{i.title}}</h2>
     <img src="{{i.image}}" alt="" width="100px">
     <h4>{{i.price}}</h4> -->
-  <app-product *ngFor="let i of products" (productClicked)="clickProduct($event)" [product]="i"></app-product>
+  <app-product *ngFor="let i of products" [product]="i"></app-product>
 </div>
 <hr>
 <h3>

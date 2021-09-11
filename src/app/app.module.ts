@@ -11,7 +11,7 @@ import { CartComponent } from './components/cart/cart.component';
 // import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 //import { ContactComponent } from './components/contact/contact.component';
-import { PruebasComponent } from './components/pruebas/pruebas.component';
+//import { PruebasComponent } from './components/pruebas/pruebas.component';
 //import { HeaderComponent } from './components/shared/components/header/header.component';
 //import { FooterComponent } from './components/footer/footer.component';
 //import { BannerComponent } from './components/banner/banner.component';
@@ -35,7 +35,7 @@ import { SharedModule } from './components/shared/shared.module';
     // HomeComponent,
     ProductsComponent,
     //ContactComponent,
-    PruebasComponent,
+    //PruebasComponent,
     //HeaderComponent,
     //FooterComponent,
     //BannerComponent,

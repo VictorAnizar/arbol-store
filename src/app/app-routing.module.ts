@@ -3,7 +3,7 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 // import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
 //import { ContactComponent } from './components/contact/contact.component';
-import { PruebasComponent } from './components/pruebas/pruebas.component';
+// import { PruebasComponent } from './components/pruebas/pruebas.component';
 import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 //import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
@@ -12,26 +12,29 @@ import { LayoutComponent } from './components/layout/layout.component';
 
 const routes: Routes = [
   {
-    path: '', component: LayoutComponent , children: [
-      {path: '', redirectTo: '/home', pathMatch: 'full'},
-      { 
-        path: 'home', 
+    path: '', component: LayoutComponent, children: [
+      { path: '', redirectTo: '/home', pathMatch: 'full' },
+      {
+        path: 'home',
         // component: HomeComponent 
-        loadChildren: () => import('./components/home/home.module').then(m=>m.HomeModule)
+        loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule)
       },
       { path: 'products', component: ProductsComponent },
       { path: 'products/:id', component: ProductDetailComponent },
-      { 
-        path: 'servicios', 
-        loadChildren: ()=> import('./components/servicios-cards/servicios-cards.module').then(m=>m.ServiciosCardsModule)
+      {
+        path: 'servicios',
+        loadChildren: () => import('./components/servicios-cards/servicios-cards.module').then(m => m.ServiciosCardsModule)
         //component: ServiciosCardsComponent 
       },
       //{ path: 'servicios/:id', component: ServicioDetailComponent },
-      { 
-        path: 'contact', 
-        loadChildren: () => import('./components/contact/contact.module').then(m=>m.ContactModule) 
+      {
+        path: 'contact',
+        loadChildren: () => import('./components/contact/contact.module').then(m => m.ContactModule)
       },
-      { path: 'pruebas', component: PruebasComponent },
+      {
+        path: 'pruebas', 
+        loadChildren: ()=>import('./components/pruebas/pruebas.module').then(m=>m.PruebasModule)
+      },
       { path: '**', component: PaginaNoEncontradaComponent }
     ]
   },
@@ -40,7 +43,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-      RouterModule.forRoot(routes, {
+    RouterModule.forRoot(routes, {
       preloadingStrategy: PreloadAllModules
     })
   ],
