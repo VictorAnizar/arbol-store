@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './components/product/product.component';
+// import { ProductComponent } from './components/shared/components/product/product.component';
 import { CartComponent } from './components/cart/cart.component';
 //import { ExponentialPipe } from './pipes/exponential/exponential.pipe';
 //import { SumaPipePipe } from './pipes/suma/suma-pipe.pipe';
@@ -27,7 +27,7 @@ import { SharedModule } from './components/shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
+    // ProductComponent,
     CartComponent,
     //ExponentialPipe,
     //SumaPipePipe,

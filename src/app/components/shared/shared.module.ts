@@ -5,12 +5,13 @@ import { SumaPipePipe } from './pipes/suma/suma-pipe.pipe';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ProductComponent } from './components/product/product.component';
 import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  declarations: [ExponentialPipe, SumaPipePipe, HighlightDirective, FooterComponent, HeaderComponent],
-  exports: [ExponentialPipe, SumaPipePipe, HighlightDirective, FooterComponent, HeaderComponent],
+  declarations: [ExponentialPipe,ProductComponent, SumaPipePipe, HighlightDirective, FooterComponent, HeaderComponent],
+  exports: [ExponentialPipe, ProductComponent,SumaPipePipe, HighlightDirective, FooterComponent, HeaderComponent],
   imports: [
     CommonModule, RouterModule
   ]

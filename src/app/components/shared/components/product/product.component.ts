@@ -2,7 +2,7 @@ import { Component, OnInit, OnChanges, SimpleChanges, DoCheck, OnDestroy } from 
 import { Input } from '@angular/core';
 import { Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
-import { Product } from '../../modules/product';
+import { Product } from '../../../../modules/product';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
