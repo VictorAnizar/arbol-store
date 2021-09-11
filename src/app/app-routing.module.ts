@@ -6,7 +6,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { PruebasComponent } from './components/pruebas/pruebas.component';
 import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
+//import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
 //import { ServicioDetailComponent } from './components/servicio-detail/servicio-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
 

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ServiciosCardsComponent } from './servicios-cards.component';
+import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
 import { ServicioDetailComponent } from './components/servicio-detail/servicio-detail.component';
 
 const routes: Routes = [
