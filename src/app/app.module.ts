@@ -10,7 +10,7 @@ import { SumaPipePipe } from './pipes/suma/suma-pipe.pipe';
 import { HighlightDirective } from './directives/highlight/highlight.directive';
 // import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
-import { ContactComponent } from './components/contact/contact.component';
+//import { ContactComponent } from './components/contact/contact.component';
 import { PruebasComponent } from './components/pruebas/pruebas.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -32,7 +32,7 @@ import { LayoutComponent } from './components/layout/layout.component';
     HighlightDirective,
     // HomeComponent,
     ProductsComponent,
-    ContactComponent,
+    //ContactComponent,
     PruebasComponent,
     HeaderComponent,
     FooterComponent,

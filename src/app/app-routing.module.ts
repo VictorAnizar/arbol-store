@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 // import { HomeComponent } from './components/home/home.component';
 import { ProductsComponent } from './components/products/products.component';
-import { ContactComponent } from './components/contact/contact.component';
+//import { ContactComponent } from './components/contact/contact.component';
 import { PruebasComponent } from './components/pruebas/pruebas.component';
 import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
@@ -23,7 +23,10 @@ const routes: Routes = [
       { path: 'products/:id', component: ProductDetailComponent },
       { path: 'servicios', component: ServiciosCardsComponent },
       { path: 'servicios/:id', component: ServicioDetailComponent },
-      { path: 'contact', component: ContactComponent },
+      { 
+        path: 'contact', 
+        loadChildren: () => import('./components/contact/contact.module').then(m=>m.ContactModule) 
+      },
       { path: 'pruebas', component: PruebasComponent },
       { path: '**', component: PaginaNoEncontradaComponent }
     ]
@@ -32,9 +35,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: PreloadAllModules
-  })],
+  imports: [
+      RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
