@@ -6,8 +6,8 @@ import { ProductsComponent } from './components/products/products.component';
 // import { PruebasComponent } from './components/pruebas/pruebas.component';
 import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-//import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
-//import { ServicioDetailComponent } from './components/servicio-detail/servicio-detail.component';
+import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
+import { ServicioDetailComponent } from './components/servicio-detail/servicio-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
 
 const routes: Routes = [
@@ -23,10 +23,10 @@ const routes: Routes = [
       { path: 'products/:id', component: ProductDetailComponent },
       {
         path: 'servicios',
-        loadChildren: () => import('./components/servicios-cards/servicios-cards.module').then(m => m.ServiciosCardsModule)
-        //component: ServiciosCardsComponent 
+        //loadChildren: () => import('./components/servicios-cards/servicios-cards.module').then(m => m.ServiciosCardsModule)
+        component: ServiciosCardsComponent 
       },
-      //{ path: 'servicios/:id', component: ServicioDetailComponent },
+      { path: 'servicios/:id', component: ServicioDetailComponent },
       {
         path: 'contact',
         loadChildren: () => import('./components/contact/contact.module').then(m => m.ContactModule)
