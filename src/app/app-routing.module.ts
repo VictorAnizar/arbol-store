@@ -5,7 +5,7 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 //import { ContactComponent } from './components/contact/contact.component';
 // import { PruebasComponent } from './components/pruebas/pruebas.component';
 import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
-import { ProductDetailComponent } from './components/products/components/product-detail/product-detail.component';
+// import { ProductDetailComponent } from './components/products/components/product-detail/product-detail.component';
 // import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
 // import { ServicioDetailComponent } from './components/servicios-cards/components/servicio-detail/servicio-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
