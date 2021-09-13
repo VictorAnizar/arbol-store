@@ -4,7 +4,7 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 // import { ProductsComponent } from './components/products/products.component';
 //import { ContactComponent } from './components/contact/contact.component';
 // import { PruebasComponent } from './components/pruebas/pruebas.component';
-import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
+// import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
 // import { ProductDetailComponent } from './components/products/components/product-detail/product-detail.component';
 // import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
 // import { ServicioDetailComponent } from './components/servicios-cards/components/servicio-detail/servicio-detail.component';
@@ -45,7 +45,7 @@ const routes: Routes = [
     ],
     
   },
-  { path: '**', component: PaginaNoEncontradaComponent }
+  { path: '**', loadChildren: ()=>import('./components/pagina-no-encontrada/pagina-no-encontrada.module').then(m=>m.PaginaNoEncontradaModule) }
 
 ];
 

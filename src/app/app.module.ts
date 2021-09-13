@@ -15,7 +15,7 @@ import { CartComponent } from './components/cart/cart.component';
 //import { HeaderComponent } from './components/shared/components/header/header.component';
 //import { FooterComponent } from './components/footer/footer.component';
 //import { BannerComponent } from './components/banner/banner.component';
-import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
+// import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
 // import { ProductDetailComponent } from './components/products/components/product-detail/product-detail.component';
 // import { ServicioCardComponent } from './components/shared/components/servicio-card/servicio-card.component';
 // import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
@@ -39,7 +39,7 @@ import { CoreModule } from './components/core/core.module';
     //HeaderComponent,
     //FooterComponent,
     //BannerComponent,
-    PaginaNoEncontradaComponent,
+    // PaginaNoEncontradaComponent,
     // ProductDetailComponent,
     // ServicioCardComponent,
     // ServiciosCardsComponent,
