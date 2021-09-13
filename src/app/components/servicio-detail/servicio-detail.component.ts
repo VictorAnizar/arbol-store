@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Servicio } from 'src/app/modules/servicios';
-import { ServicioService } from 'src/app/services/servicio/servicio.service';
+import { Servicio } from 'src/app/models/servicios';
+import { ServicioService } from 'src/app/components/core/services/servicio/servicio.service';
 @Component({
   selector: 'app-servicio-detail',
   templateUrl: './servicio-detail.component.html',
