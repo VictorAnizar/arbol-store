@@ -9,6 +9,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 // import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
 import { ServicioDetailComponent } from './components/servicio-detail/servicio-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
+import { AdminGuard } from './guardianes/admin.guard';
 
 const routes: Routes = [
   {
@@ -33,11 +34,14 @@ const routes: Routes = [
       },
       {
         path: 'pruebas', 
-        loadChildren: ()=>import('./components/pruebas/pruebas.module').then(m=>m.PruebasModule)
+        loadChildren: ()=>import('./components/pruebas/pruebas.module').then(m=>m.PruebasModule),
+        canActivate: [AdminGuard]
       },
-      { path: '**', component: PaginaNoEncontradaComponent }
-    ]
+
+    ],
+    
   },
+  { path: '**', component: PaginaNoEncontradaComponent }
 
 ];
 

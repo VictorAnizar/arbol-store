@@ -22,7 +22,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { ServicioDetailComponent } from './components/servicio-detail/servicio-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { SharedModule } from './components/shared/shared.module';
-
+import { CoreModule } from './components/core/core.module';
 
 @NgModule({
   declarations: [
@@ -49,7 +49,7 @@ import { SharedModule } from './components/shared/shared.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, SharedModule
+    FormsModule, SharedModule, CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
