@@ -4,13 +4,34 @@
     padding: 0px;
 }
 
-
+img{
+    width: 100%;
+}
 
 .product-grid{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
     margin: 10px;
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: gainsboro;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.servicios{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    app-servicio-card{
+        margin: 10px;
+        box-shadow: 0px 0px 4px gray;
+    }
 }
 
 @media (min-width: 576px) {

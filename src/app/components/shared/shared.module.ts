@@ -7,11 +7,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductComponent } from './components/product/product.component';
 import { RouterModule } from '@angular/router';
-
+import { ServicioCardComponent } from './components/servicio-card/servicio-card.component';
 
 @NgModule({
-  declarations: [ExponentialPipe,ProductComponent, SumaPipePipe, HighlightDirective, FooterComponent, HeaderComponent],
-  exports: [ExponentialPipe, ProductComponent,SumaPipePipe, HighlightDirective, FooterComponent, HeaderComponent],
+  declarations: [ExponentialPipe,ServicioCardComponent,ProductComponent, SumaPipePipe, HighlightDirective, FooterComponent, HeaderComponent],
+  exports: [ExponentialPipe, ProductComponent,ServicioCardComponent,SumaPipePipe, HighlightDirective, FooterComponent, HeaderComponent],
   imports: [
     CommonModule, RouterModule
   ]

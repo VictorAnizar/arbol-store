@@ -1,2 +1,7 @@
 <app-banner></app-banner>
 <!-- <app-servicios-cards></app-servicios-cards> -->
+<h1>Nuestros Servicios</h1>
+
+<div class="servicios">
+    <app-servicio-card *ngFor="let i of servicios"  [servicio]="i"></app-servicio-card>
+</div>
