@@ -9,17 +9,17 @@ import { CartComponent } from './components/cart/cart.component';
 //import { SumaPipePipe } from './pipes/suma/suma-pipe.pipe';
 //import { HighlightDirective } from './directives/highlight/highlight.directive';
 // import { HomeComponent } from './components/home/home.component';
-import { ProductsComponent } from './components/products/products.component';
+// import { ProductsComponent } from './components/products/products.component';
 //import { ContactComponent } from './components/contact/contact.component';
 //import { PruebasComponent } from './components/pruebas/pruebas.component';
 //import { HeaderComponent } from './components/shared/components/header/header.component';
 //import { FooterComponent } from './components/footer/footer.component';
 //import { BannerComponent } from './components/banner/banner.component';
 import { PaginaNoEncontradaComponent } from './components/pagina-no-encontrada/pagina-no-encontrada.component';
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+// import { ProductDetailComponent } from './components/products/components/product-detail/product-detail.component';
 // import { ServicioCardComponent } from './components/shared/components/servicio-card/servicio-card.component';
 // import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
-import { ServicioDetailComponent } from './components/servicio-detail/servicio-detail.component';
+// import { ServicioDetailComponent } from './components/servicios-cards/components/servicio-detail/servicio-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { SharedModule } from './components/shared/shared.module';
 import { CoreModule } from './components/core/core.module';
@@ -33,17 +33,17 @@ import { CoreModule } from './components/core/core.module';
     //SumaPipePipe,
     //HighlightDirective,
     // HomeComponent,
-    ProductsComponent,
+    // ProductsComponent,
     //ContactComponent,
     //PruebasComponent,
     //HeaderComponent,
     //FooterComponent,
     //BannerComponent,
     PaginaNoEncontradaComponent,
-    ProductDetailComponent,
+    // ProductDetailComponent,
     // ServicioCardComponent,
     // ServiciosCardsComponent,
-    ServicioDetailComponent,
+    // ServicioDetailComponent,
     LayoutComponent
   ],
   imports: [

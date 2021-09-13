@@ -1,0 +1,51 @@
+form{
+    display: flex;
+    flex-wrap: wrap;
+    height: 35%;
+    justify-content: space-between;
+    margin: 50px;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    #campo_nombre{
+        flex-basis: 49%;
+        *{
+            width: 98.5%;
+            height: 40px;
+        }
+    }
+    #campo_email{
+        flex-basis: 49%;
+        *{
+            width: 98.5%;
+            height: 40px;
+        }
+    }
+    #campo_mensaje{
+        flex-basis: 100%;
+        flex-grow: 1;
+        margin-top: 5px;
+        *{
+            width: 99%;
+            height: 200px;
+        }
+    }
+    #boton_enviar{
+        flex-basis: 100%;
+        flex-grow: 1;
+        margin-top: 5px;
+        #button_enviar{
+            width: 100%;
+            height: 50px;
+            color: white;
+            background-color: black;
+            border-radius: 5px;
+            font-size: 20px;
+            transition: all 300ms;
+        }
+        #button_enviar:hover{
+            transform: scale(1.05);
+            color: black;
+            background-color: whitesmoke;
+        }
+    }
+}
