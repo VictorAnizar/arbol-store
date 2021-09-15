@@ -8,6 +8,7 @@
     justify-content: space-between;
     padding: 10px;
     background-color: rgb(47, 47, 47);
+    align-items: center;
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     #logo{
@@ -23,6 +24,7 @@
             transform: scale(1.1);
         }
     }
+    
     #menu{
         flex-basis: 80%;
         display: flex;

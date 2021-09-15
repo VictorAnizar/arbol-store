@@ -3,8 +3,10 @@
         <mat-card-title>{{ product.title | uppercase }}</mat-card-title>
         <img mat-card-image src="{{product.image}}" alt="">
         <mat-card-subtitle appHighlight="product.price<8000">{{product.price | exponential | currency }}</mat-card-subtitle>
-        <p>{{product.description | slice:0:10}}</p>
     </mat-card-header>
+    <mat-card-content>
+        <p>{{product.description | slice:0:10}}</p>
+    </mat-card-content>
     <mat-card-actions id="botones">
         <button id="add-cart" (click)="addCart()" mat-raised-button color="accent">Agregar al carrito</button>
         <button id="delete-cart" (click)="ngOnDestroy()" mat-raised-button color="warn">Eliminar producto</button>

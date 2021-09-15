@@ -3,6 +3,9 @@
         <a [routerLink]="['home']"><img src="../../../assets/images/icons8-tree-64.png" alt=""></a>
     </div>
 
+
+    
+
     <div id="menu">
         <!-- <button  mat-button [matMenuTriggerFor]="menu">Menu</button> -->
         <button id="boton-menu" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
@@ -13,6 +16,8 @@
             <button  mat-menu-item><a mat-button color="accent" [routerLink]="['products']" [routerLinkActive]="['active']">Products</a></button>
             <button  mat-menu-item><a mat-button color="accent" [routerLink]="['servicios']" [routerLinkActive]="['active']">Servicios</a></button>
             <button  mat-menu-item><a mat-button color="accent" [routerLink]="['contact']" [routerLinkActive]="['active']">Contact</a></button>
+            <button  mat-menu-item><a mat-button color="accent" [routerLink]="['admin']" [routerLinkActive]="['active']">Administración</a></button>
+
         </mat-menu>
         <a mat-raised-button matBadge="8" matBadgePosition="after" matBadgeColor="accent"><mat-icon>shopping_cart</mat-icon>Carrito</a>
     </div>
