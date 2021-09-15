@@ -1,31 +1,18 @@
 <h1>Contacto</h1>
 <form class="cmxform" id="commentForm" method="GET" action="">
-    <div id="campo_nombre">
-        <label for="input_nombre_contacto">Nombre:</label>
-        <input type="text" name="input_nombre_contacto" id="input_nombre_contacto">
-    </div>
-    <div id="campo_email">
-        <label for="input_email_contacto">Email</label>
-        <input type="email" name="input_email_contacto" id="input_email_contacto">
-    </div>
-    <div id="campo_mensaje">
-        <label for="input_mensaje_contacto">Mensaje</label>
-        <textarea type="text" name="input_mensaje_contacto" id="input_mensaje_contacto"></textarea>
-    </div>
+    <mat-form-field id="campo_nombre" class="example-full-width" appearance="fill">
+        <mat-label for="input_nombre_contacto">Nombre:</mat-label>
+        <input matInput  type="text" name="input_nombre_contacto" id="input_nombre_contacto">
+    </mat-form-field>
+    <mat-form-field id="campo_email" class="example-full-width" appearance="fill">
+        <mat-label for="input_email_contacto">Email</mat-label>
+        <input matInput  type="email" name="input_email_contacto" id="input_email_contacto">
+    </mat-form-field>
+    <mat-form-field id="campo_mensaje" class="example-full-width" appearance="fill">
+        <mat-label for="input_mensaje_contacto">Mensaje</mat-label>
+        <textarea matInput  type="text" name="input_mensaje_contacto" id="input_mensaje_contacto"></textarea>
+    </mat-form-field>
     <div id="boton_enviar">
-        <button type="submit" id="button_enviar">Enviar</button>
+        <button type="submit" id="button_enviar" mat-button color="primary">Enviar</button>
     </div>
 </form>
-
-<form class="example-form">
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Favorite food</mat-label>
-      <input matInput placeholder="Ex. Pizza" value="Sushi">
-    </mat-form-field>
-  
-    <mat-form-field class="example-full-width" appearance="fill">
-      <mat-label>Leave a comment</mat-label>
-      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-    </mat-form-field>
-  </form>
-  

@@ -5,13 +5,25 @@ import { CommonModule } from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 //Input
 import {MatInputModule} from '@angular/material/input';
+//toolbar
+import {MatToolbarModule} from '@angular/material/toolbar';
+//menu
+import {MatMenuModule} from '@angular/material/menu';
+//icons
+import { MatIconModule } from '@angular/material/icon';
+//badge (contador)
+import {MatBadgeModule} from '@angular/material/badge';
+//cards
+import {MatCardModule} from '@angular/material/card';
+
+
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule, MatButtonModule, MatInputModule
+    CommonModule, MatButtonModule, MatInputModule, MatToolbarModule, MatMenuModule, MatIconModule, MatBadgeModule, MatCardModule
   ],
-  exports: [MatButtonModule, MatInputModule]
+  exports: [MatButtonModule, MatInputModule, MatToolbarModule, MatMenuModule, MatIconModule, MatBadgeModule, MatCardModule]
 })
 export class MaterialModule { }
