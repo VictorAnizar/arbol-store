@@ -23,6 +23,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { LayoutComponent } from './components/layout/layout.component';
 import { SharedModule } from './components/shared/shared.module';
 import { CoreModule } from './components/core/core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,7 @@ import { CoreModule } from './components/core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, SharedModule, CoreModule
+    FormsModule, SharedModule, CoreModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
