@@ -16,10 +16,14 @@ import { TableComponent } from './components/table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, TableComponent],
+  declarations: [ProductFormComponent, NavComponent, TableComponent, DashboardComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
@@ -30,15 +34,13 @@ import { MatSortModule } from '@angular/material/sort';
     // MatCardModule,
     ReactiveFormsModule,
     MaterialModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
     MatIconModule,
-    MatListModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule    
+    MatButtonModule,
+    LayoutModule
+     
   ]
 })
 export class AdminModule { }

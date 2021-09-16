@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
+import { Comida } from 'src/app/models/comida';
+import { ComidasService } from 'src/app/components/core/services/comidas/comidas.service';
 @Component({
   selector: 'app-pruebas',
   templateUrl: './pruebas.component.html',
   styleUrls: ['./pruebas.component.scss']
 })
 export class PruebasComponent implements OnInit {
-
+  comidaaa:Comida;
   numero1: number;
   numero2: number;
   title = 'arbol-store';
@@ -61,6 +63,13 @@ export class PruebasComponent implements OnInit {
       description: 'bla bla bla bla bla'
     }
   ];
+  constructor(public comidasService: ComidasService){
+    this.comidasService.getRandomMeal().subscribe(meal=>{
+      this.comidaaa=meal.meals[0];
+      console.log(meal);
+      
+    })
+  }
   addItem(){
     this.items.push("Nuevo elemento");
   }

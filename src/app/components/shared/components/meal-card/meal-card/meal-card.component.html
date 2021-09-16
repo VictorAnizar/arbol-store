@@ -1,6 +1,10 @@
-<div id="meal-info">
-    <h2>{{comida.strMeal}}</h2>
-    <img src="{{comida.strMealThumb}}" alt="" >
-    <h4>{{comida.strCategory}}</h4>
-    <h4>Origen: {{comida.strArea}}</h4>
-</div>
+<mat-card class="example-card" id="meal-info">
+    <mat-card-header>
+        <mat-card-title>{{comida.strMeal}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{comida.strMealThumb}}" alt="" >
+    <mat-card-content>
+        <h4>{{comida.strCategory}}</h4>
+        <h4>Origen: {{comida.strArea}}</h4>
+    </mat-card-content>
+</mat-card>>

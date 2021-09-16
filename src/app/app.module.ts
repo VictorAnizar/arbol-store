@@ -24,7 +24,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { SharedModule } from './components/shared/shared.module';
 import { CoreModule } from './components/core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,12 +45,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     // ServicioCardComponent,
     // ServiciosCardsComponent,
     // ServicioDetailComponent,
-    LayoutComponent
+    LayoutComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule, SharedModule, CoreModule, BrowserAnimationsModule
+    FormsModule, SharedModule, CoreModule, BrowserAnimationsModule, HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

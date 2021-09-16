@@ -9,9 +9,10 @@ import { ProductComponent } from './components/product/product.component';
 import { RouterModule } from '@angular/router';
 import { ServicioCardComponent } from './components/servicio-card/servicio-card.component';
 import { MaterialModule } from 'src/app/material/material.module';
+import { MealCardComponent } from './components/meal-card/meal-card/meal-card.component';
 @NgModule({
-  declarations: [ExponentialPipe,ServicioCardComponent,ProductComponent, SumaPipePipe, HighlightDirective, FooterComponent, HeaderComponent],
-  exports: [ExponentialPipe, ProductComponent,ServicioCardComponent,SumaPipePipe, HighlightDirective, FooterComponent, HeaderComponent],
+  declarations: [ExponentialPipe,ServicioCardComponent,ProductComponent, SumaPipePipe, HighlightDirective, FooterComponent, HeaderComponent, MealCardComponent],
+  exports: [ExponentialPipe, ProductComponent,ServicioCardComponent,SumaPipePipe, HighlightDirective, FooterComponent, HeaderComponent, MealCardComponent],
   imports: [
     CommonModule, RouterModule, MaterialModule
   ]

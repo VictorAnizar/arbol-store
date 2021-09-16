@@ -1,0 +1,30 @@
+#meal-info{
+    //margin: 0 auto;
+    width: 50%;
+    text-align: center;
+    mat-card-header{
+        justify-content: center;
+        mat-card-title{
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+    img{
+        width: 500px;
+        height: 500px;
+    }
+    animation: movimiento 5s infinite;
+}
+
+@keyframes movimiento{
+    0%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(90%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+
+}

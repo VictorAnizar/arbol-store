@@ -39,7 +39,7 @@ const routes: Routes = [
       {
         path: 'pruebas', 
         loadChildren: ()=>import('./components/pruebas/pruebas.module').then(m=>m.PruebasModule),
-        canActivate: [AdminGuard]
+        // canActivate: [AdminGuard]
       },
 
     ],
