@@ -17,6 +17,8 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 //expansion
 import {MatExpansionModule} from '@angular/material/expansion';
+//pestañas
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 //generados por schematic
@@ -55,7 +57,8 @@ import { MatTableModule } from '@angular/material/table';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatExpansionModule   
+    MatExpansionModule,
+    MatTabsModule   
   ],
   exports: [
     MatButtonModule, 
@@ -76,7 +79,8 @@ import { MatTableModule } from '@angular/material/table';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule, 
-    MatExpansionModule
+    MatExpansionModule,
+    MatTabsModule
   ]
 })
 export class MaterialModule { }

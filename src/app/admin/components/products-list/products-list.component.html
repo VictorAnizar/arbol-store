@@ -1,0 +1,56 @@
+<h1>Productos</h1>
+<mat-tab-group>
+    <mat-tab label="Productos">
+        <div class="demo-button-container">
+            <button mat-raised-button color="accent"class="demo-button" (click)="createProduct()">
+              Agregar Producto
+            </button>
+           
+          </div>
+          
+        <table mat-table [dataSource]="products" class="products-table">
+
+            <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- id Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> id </th>
+                <td mat-cell *matCellDef="let product"> {{product.id}} </td>
+            </ng-container>
+
+            <!-- titulo Column -->
+            <ng-container matColumnDef="titulo">
+                <th mat-header-cell *matHeaderCellDef> titulo </th>
+                <td mat-cell *matCellDef="let product"> {{product.title}} </td>
+            </ng-container>
+
+            <!--precio Column -->
+            <ng-container matColumnDef="precio">
+                <th mat-header-cell *matHeaderCellDef> precio </th>
+                <td mat-cell *matCellDef="let product"> {{product.price}} </td>
+            </ng-container>
+
+            <!--acciones Column -->
+            <ng-container matColumnDef="acciones">
+                <th mat-header-cell *matHeaderCellDef> acciones </th>
+                <td mat-cell *matCellDef="let product">
+                    <button mat-mini-fab color="primary" (click)="editProduct(product.id)">
+                        <mat-icon>mode_edit</mat-icon>
+                    </button>
+                    <button mat-mini-fab color="warn" (click)="deleteProduct(product.id)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+
+
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+
+    </mat-tab>
+    <mat-tab label="Second"> Content 2 </mat-tab>
+</mat-tab-group>
