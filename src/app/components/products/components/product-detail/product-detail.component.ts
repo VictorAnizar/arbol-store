@@ -8,7 +8,7 @@ import { ProductsService } from 'src/app/components/core/services/products/produ
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
-  public productoAttr: any;
+  public productoAttr: Product;
   constructor(
     private route: ActivatedRoute,
     private productsService: ProductsService
@@ -27,4 +27,21 @@ export class ProductDetailComponent implements OnInit {
     });
   }
 
+  updateProduct(){
+    const modifyProducto:Partial<Product> ={
+      id: '222',
+      title: this.productoAttr.title+'(modificado)'
+    }
+    this.productsService.updateProduct(this.productoAttr.id,modifyProducto).subscribe(product=>{
+      console.log(product);
+      
+    })
+  }
+
+  deleteProduct(){
+    this.productsService.deleteProduct(this.productoAttr.id).subscribe(prod=>{
+      console.log(prod);
+    })
+  }
+  
 }

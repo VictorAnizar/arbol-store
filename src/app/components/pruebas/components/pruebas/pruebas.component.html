@@ -1,3 +1,10 @@
+<br>
+<div id="comidas">
+  <app-meal-card *ngFor="let i of comidasArray" [comida]=i></app-meal-card>  
+</div>
+
+<br>
+<hr>
 
 <h2>Sumando dos numeros</h2>
 
@@ -54,8 +61,9 @@
     <h4>{{i.price}}</h4> -->
   <app-product *ngFor="let i of products" [product]="i"></app-product>
 </div>
+<br>
 <hr>
 
-<app-meal-card [comida]="comidaaa"></app-meal-card>
-<h3>
-</h3>
+<br>
+<!-- <app-meal-card *ngIf="comidaaa" [comida]="comidaaa"></app-meal-card> -->
+

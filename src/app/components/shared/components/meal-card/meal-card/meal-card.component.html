@@ -1,10 +1,43 @@
-<mat-card class="example-card" id="meal-info">
+<!-- <mat-card class="example-card" id="meal-info">
     <mat-card-header>
         <mat-card-title>{{comida.strMeal}}</mat-card-title>
     </mat-card-header>
-    <img mat-card-image src="{{comida.strMealThumb}}" alt="" >
+    <img mat-card-image src="{{comida.strMealThumb}}" alt="">
     <mat-card-content>
         <h4>{{comida.strCategory}}</h4>
         <h4>Origen: {{comida.strArea}}</h4>
     </mat-card-content>
-</mat-card>>
+</mat-card> -->
+
+<mat-accordion>
+    <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+            <mat-card class="example-card" id="meal-info">
+                <mat-card-header>
+                    <mat-card-title>{{comida.strMeal}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src="{{comida.strMealThumb}}" alt="">
+                <mat-card-content>
+                    <h4>{{comida.strCategory}}</h4>
+                    <h4>Origen: {{comida.strArea}}</h4>
+                </mat-card-content>
+            </mat-card>
+        </mat-expansion-panel-header>
+        <h2>Ingredients</h2>
+        <hr>
+        <br>
+        <ul>
+            <li>{{comida.strIngredient1}}</li>
+            <li>{{comida.strIngredient2}}</li>
+            <li>{{comida.strIngredient3}}</li>
+            <li>{{comida.strIngredient4}}</li>
+            <li>{{comida.strIngredient5}}</li>
+        </ul>
+        <br>
+        <h2>Instructions</h2>
+        <hr>
+        <br>
+        <p>{{comida.strInstructions}}}</p>
+    </mat-expansion-panel>
+    
+</mat-accordion>

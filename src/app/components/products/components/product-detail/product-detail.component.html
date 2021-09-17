@@ -8,6 +8,9 @@
         <h3>{{productoAttr.price | currency}}</h3>
         <h3>{{productoAttr.description}}</h3>
         <button mat-flat-button color="primary">Añadir al carrito</button>
+        <button mat-flat-button color="primary" (click)="updateProduct()">Editar</button>
+        <button mat-flat-button color="primary" (click)="deleteProduct()">Eliminar</button>
+        
     </div>
 
 </div>

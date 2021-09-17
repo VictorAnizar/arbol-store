@@ -8,12 +8,12 @@ import { ComidasService } from 'src/app/components/core/services/comidas/comidas
   styleUrls: ['./pruebas.component.scss']
 })
 export class PruebasComponent implements OnInit {
-  comidaaa:Comida;
+  comidaaa: Comida;
   numero1: number;
   numero2: number;
   title = 'arbol-store';
-  items=["pepe", "pizza", "milk"]; 
-  objetoPrueba:any={
+  items = ["pepe", "pizza", "milk"];
+  objetoPrueba: any = {
     comida: "Pizza",
     color: "negro",
     musica: "metal",
@@ -63,20 +63,37 @@ export class PruebasComponent implements OnInit {
       description: 'bla bla bla bla bla'
     }
   ];
-  constructor(public comidasService: ComidasService){
-    this.comidasService.getRandomMeal().subscribe(meal=>{
-      this.comidaaa=meal.meals[0];
-      console.log(meal);
-      
-    })
+
+  comidasArray: Comida[]=[];
+  constructor(public comidasService: ComidasService) {
+    //this.fetchUnaComida();
+    this.fetchVariasComidas(4, this.comidasArray);
   }
-  addItem(){
+  fetchUnaComida() {
+    this.comidasService.getRandomMeal().subscribe(
+      meal => {
+        this.comidaaa = meal.meals[0];
+      });
+  }
+
+  fetchVariasComidas(numeroComidas: number, arregloComidas: Comida[]) {
+    for (let i = 1; i <= numeroComidas; i++) {
+      this.comidasService.getRandomMeal().subscribe(
+        meal => {          
+          arregloComidas.push(meal.meals[0]);
+        });
+    }
+
+
+  }
+
+  addItem() {
     this.items.push("Nuevo elemento");
   }
-  deleteItem(index: number){
-    this.items.splice(index,1);
+  deleteItem(index: number) {
+    this.items.splice(index, 1);
   }
-  
+
 
   ngOnInit(): void {
   }

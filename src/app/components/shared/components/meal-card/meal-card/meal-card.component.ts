@@ -9,11 +9,13 @@ import { Input } from '@angular/core';
 })
 export class MealCardComponent implements OnInit {
   @Input() comida: Comida;
+  panelOpenState = false;
+
   constructor() { }
 
   ngOnInit(): void {
-    
-    
+
+
   }
 
 }

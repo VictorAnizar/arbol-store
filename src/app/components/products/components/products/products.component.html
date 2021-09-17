@@ -5,4 +5,8 @@
     <app-product *ngFor="let i of products" (productClicked)="clickProduct($event)" [product]="i"></app-product>
   </div>
 
+  <button (click)="createProduct()">Crear Producto</button>
+
+  <!-- <button (click)="updateProduct()">Modificar Producto 2</button> -->
+
   <h3>Basic Buttons</h3>
