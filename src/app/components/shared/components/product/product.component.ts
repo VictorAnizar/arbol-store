@@ -3,6 +3,7 @@ import { Input } from '@angular/core';
 import { Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import { Product } from '../../../../models/product';
+import { CartService } from 'src/app/components/core/services/cart/cart.service';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -11,7 +12,7 @@ import { Product } from '../../../../models/product';
 export class ProductComponent implements DoCheck, OnInit, OnDestroy{
   @Input() product: Product;
   @Output() productClicked: EventEmitter<any> = new EventEmitter();
-  constructor(){
+  constructor(public cartService: CartService){
     console.log("1. Construyendo producto");
   }
   // ngOnChanges(changes: SimpleChanges ){
@@ -32,8 +33,10 @@ export class ProductComponent implements DoCheck, OnInit, OnDestroy{
     
   }
   addCart(){
+    this.cartService.addCart(this.product);
     console.log("Añadido al carrito");
-    this.productClicked.emit(this.product.id);
+
+    // this.productClicked.emit(this.product.id);
   }
 
  
