@@ -1,17 +1,22 @@
 <form class="cmxform" id="commentForm" method="GET" action="">
     <mat-form-field id="campo_nombre" class="example-full-width" appearance="fill">
         <mat-label for="input_nombre_contacto">Nombre:</mat-label>
-        <input matInput  type="text" name="input_nombre_contacto" id="input_nombre_contacto">
+        <input matInput  type="text" name="input_nombre_contacto" id="input_nombre_contacto" [formControl]="nameField">
+        <p class="alertMistake" *ngIf="!nameField.valid &&nameField.touched"><span>El campo no es válido</span></p>
+
     </mat-form-field>
     <mat-form-field id="campo_email" class="example-full-width" appearance="fill">
         <mat-label for="input_email_contacto">Email</mat-label>
-        <input matInput  type="email" name="input_email_contacto" id="input_email_contacto">
+        <input matInput  type="email" name="input_email_contacto" id="input_email_contacto" [formControl]="emailField">
+        <p class="alertMistake" *ngIf="!emailField.valid && emailField.touched"><span>El campo no es válido</span></p>
     </mat-form-field>
     <mat-form-field id="campo_mensaje" class="example-full-width" appearance="fill">
         <mat-label for="input_mensaje_contacto">Mensaje</mat-label>
-        <textarea matInput  type="text" name="input_mensaje_contacto" id="input_mensaje_contacto"></textarea>
+        <textarea matInput  type="text" name="input_mensaje_contacto" id="input_mensaje_contacto" [formControl]="mensajeField"></textarea>
+        <p class="alertMistake" *ngIf="!mensajeField.valid && mensajeField.touched"><span>El campo no es válido</span></p>
+
     </mat-form-field>
     <div id="boton_enviar">
-        <button type="submit" id="button_enviar" mat-button color="primary">Enviar</button>
+        <button [disabled]="emailField.invalid || nameField.invalid || mensajeField.invalid" type="submit" id="button_enviar" mat-button color="primary" (click)="sendContact()">Enviar</button>
     </div>
 </form>

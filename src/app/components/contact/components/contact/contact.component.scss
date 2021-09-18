@@ -19,12 +19,18 @@
             width: 98.5%;
             height: 40px;
         }
+        #input_nombre_contacto{
+            color: whitesmoke;
+        }
     }
     #campo_email{
         flex-basis: 49%;
         *{
             width: 98.5%;
             height: 40px;
+        }
+        #input_email_contacto{
+            color: whitesmoke;
         }
     }
     #campo_mensaje{
@@ -34,6 +40,9 @@
         *{
             width: 99%;
             height: 200px;
+        }
+        #input_mensaje_contacto{
+            color: whitesmoke;
         }
     }
     #boton_enviar{
@@ -55,4 +64,16 @@
         //     background-color: whitesmoke;
         // }
     }
+}
+
+.alertMistake{
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 30px;
 }

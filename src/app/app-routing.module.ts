@@ -9,12 +9,16 @@ import { RouterModule, Routes, PreloadAllModules } from '@angular/router';
 // import { ServiciosCardsComponent } from './components/servicios-cards/servicios-cards.component';
 // import { ServicioDetailComponent } from './components/servicios-cards/components/servicio-detail/servicio-detail.component';
 import { LayoutComponent } from './components/layout/layout.component';
-import { AdminGuard } from './guardianes/admin.guard';
+// import { AdminGuard } from './guardianes/admin.guard';
 
 const routes: Routes = [
   {
     path: '', component: LayoutComponent, children: [
-      { path: '', redirectTo: '/home', pathMatch: 'full' },
+      { 
+        path: '', 
+        redirectTo: '/home', 
+        pathMatch: 'full' 
+      },
       {
         path: 'home',
         // component: HomeComponent 
