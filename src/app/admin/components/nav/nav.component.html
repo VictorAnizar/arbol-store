@@ -5,9 +5,9 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item [routerLink]="['create']" [routerLinkActive]="['active']">Crear producto</a>
+      <a mat-list-item [routerLink]="['/admin']" [routerLinkActive]="['active']">dashboard</a>
+      <!-- <a mat-list-item [routerLink]="['products/create']" [routerLinkActive]="['active']">Crear producto</a> -->
       <a mat-list-item [routerLink]="['info-table']" [routerLinkActive]="['active']">Tabla</a>
-      <a mat-list-item [routerLink]="['dashboard']" [routerLinkActive]="['active']">dashboard</a>
       <a mat-list-item [routerLink]="['products']" [routerLinkActive]="['active']">Lista de productos</a>
       <a mat-list-item [routerLink]="['/home']" [routerLinkActive]="['active']">Salir de la administracion</a>
     </mat-nav-list>

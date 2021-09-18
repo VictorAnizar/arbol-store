@@ -5,25 +5,27 @@ import { NavComponent } from './components/nav/nav.component';
 import { TableComponent } from './components/table/table.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
+import { GeneraProductoComponent } from './components/genera-producto/genera-producto.component';
 const routes: Routes = [
   {
     path: '',
     component: NavComponent,
     children: [
       {
-        path: 'create',
-        component: ProductFormComponent
+        path: '',
+        component: DashboardComponent
       },
       {
         path:'info-table',
         component: TableComponent
-      },{
-        path: 'dashboard',
-        component: DashboardComponent
       },
+      
       {
         path: 'products',
         component: ProductsListComponent
+      }, {
+        path: 'products/create',
+        component: GeneraProductoComponent
       }
     ]
   },

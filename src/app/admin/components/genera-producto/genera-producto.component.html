@@ -1,0 +1,31 @@
+<form [formGroup]="form" appearance="fill" (ngSubmit)="saveProduct($event)">
+    <mat-form-field>
+        <mat-label>Id del producto</mat-label>
+        <input matInput formControlName="id" type="text">
+    </mat-form-field>
+    <!-- <br> -->
+    <mat-form-field>
+        <mat-label>Nombre del producto</mat-label>
+        <input matInput formControlName="title" type="text">
+    </mat-form-field>
+    <!-- <br> -->
+    <mat-form-field>
+        <mat-label>Precio de producto</mat-label>
+        <input matInput formControlName="price" type="number" class="example-right-align" placeholder="0">
+        <span matPrefix>$&nbsp;</span>
+        <span matSuffix>.00</span>
+        <div *ngIf="form.get('price').errors && form.get('price').dirty">
+            <p *ngIf="form.get('price').hasError('price_invalid')">Campo invalido</p>
+            <p *ngIf="form.get('price').hasError('required')">Campo obligatorio</p>
+
+        </div>
+    </mat-form-field>
+    <!-- <br> -->
+    <mat-form-field>
+        <mat-label>Descripción del producto</mat-label>
+        <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+    <button [disabled]="form.invalid" mat-raised-button color="accent" class="demo-button" type="submit">
+        Agregar Producto
+    </button>
+</form>

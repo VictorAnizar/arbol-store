@@ -2,10 +2,12 @@
 <mat-tab-group>
     <mat-tab label="Productos">
         <div class="demo-button-container">
-            <button mat-raised-button color="accent"class="demo-button" (click)="createProduct()">
+            <!-- <button mat-raised-button color="accent"class="demo-button" (click)="createProduct()">
               Agregar Producto
-            </button>
-           
+            </button> -->
+            <!-- [routerLink]="['/admin/products/create']" -->
+            <a mat-raised-button color="accent" [routerLink]="['create']" [routerLinkActive]="['active']">Crear producto</a>
+
           </div>
           
         <table mat-table [dataSource]="products" class="products-table">

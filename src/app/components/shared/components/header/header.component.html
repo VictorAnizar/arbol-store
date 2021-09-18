@@ -8,8 +8,8 @@
 
     <div id="menu">
         <!-- <button  mat-button [matMenuTriggerFor]="menu">Menu</button> -->
-        <button id="boton-menu" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-            <mat-icon>more_vert</mat-icon>
+        <button id="boton-menu" mat-fab [matMenuTriggerFor]="menu">
+            <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
             <button  mat-menu-item><a mat-button color="accent" [routerLink]="['home']" [routerLinkActive]="['active']">Home</a></button>
