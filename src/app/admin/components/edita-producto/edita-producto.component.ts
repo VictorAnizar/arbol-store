@@ -31,14 +31,14 @@ export class EditaProductoComponent implements OnInit {
     this.route.params.subscribe((params: Params)=>{
       this.id= params.id;
       this.fetchProduct();
-      console.log(this.id);
       
     });
   }
 
   fetchProduct(){
     this.productsService.getProduct(this.id).subscribe(p=>{
-      this.product=p;
+      // this.product=p;
+      this.form.patchValue(p)
     })
   }
 
@@ -72,12 +72,14 @@ export class EditaProductoComponent implements OnInit {
   }
 
   saveProductModified(event: Event){
-    this.productsService.updateProduct(this.id, this.form.value).subscribe(p=>{
+    if (this.form.valid) {
+      this.productsService.updateProduct(this.id, this.form.value).subscribe(p=>{
         console.log(p);
         alert("Producto Actializado");
         this.router.navigate(['/admin/products']);
       }
     )
+    }
     
   }
 

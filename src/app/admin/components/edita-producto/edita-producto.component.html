@@ -1,15 +1,15 @@
 <h2>Editar un producto</h2>
-<form *ngIf="product" [formGroup]="form" appearance="fill" (ngSubmit)="saveProductModified($event)">
+<form  [formGroup]="form" appearance="fill" (ngSubmit)="saveProductModified($event)">
    
     <!-- <br> -->
     <mat-form-field>
         <mat-label>Nombre del producto</mat-label>
-        <input matInput formControlName="title" placeholder="{{product.title}}" type="text">
+        <input matInput formControlName="title"  type="text">
     </mat-form-field>
     <!-- <br> -->
     <mat-form-field>
         <mat-label>Precio de producto</mat-label>
-        <input matInput formControlName="price" placeholder="{{product.price}}" type="number" class="example-right-align">
+        <input matInput formControlName="price"  type="number" class="example-right-align">
         <span matPrefix>$&nbsp;</span>
         <span matSuffix>.00</span>
         <div *ngIf="form.get('price').errors && form.get('price').dirty">
@@ -21,7 +21,7 @@
     <!-- <br> -->
     <mat-form-field>
         <mat-label>Descripción del producto</mat-label>
-        <textarea matInput placeholder="{{product.description}}" formControlName="description"></textarea>
+        <textarea matInput  formControlName="description"></textarea>
     </mat-form-field>
     <button [disabled]="form.invalid" mat-raised-button color="accent" class="demo-button" type="submit">
         Confirmar Edición
