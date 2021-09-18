@@ -22,10 +22,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { GeneraProductoComponent } from './components/genera-producto/genera-producto.component';
+import { EditaProductoComponent } from './components/edita-producto/edita-producto.component';
 
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, TableComponent, DashboardComponent, ProductsListComponent, GeneraProductoComponent],
+  declarations: [ProductFormComponent, NavComponent, TableComponent, DashboardComponent, ProductsListComponent, GeneraProductoComponent, EditaProductoComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

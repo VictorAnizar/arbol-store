@@ -20,6 +20,8 @@ export class GeneraProductoComponent implements OnInit {
     private router: Router
   ) {
     this.buildForm();
+    console.log(this.form.value);
+    
    }
 
   ngOnInit(): void {

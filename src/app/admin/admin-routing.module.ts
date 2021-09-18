@@ -6,6 +6,7 @@ import { TableComponent } from './components/table/table.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { GeneraProductoComponent } from './components/genera-producto/genera-producto.component';
+import { EditaProductoComponent } from './components/edita-producto/edita-producto.component';
 const routes: Routes = [
   {
     path: '',
@@ -23,9 +24,14 @@ const routes: Routes = [
       {
         path: 'products',
         component: ProductsListComponent
-      }, {
+      }, 
+      {
         path: 'products/create',
         component: GeneraProductoComponent
+      },
+      {
+        path: 'products/edit/:id',
+        component: EditaProductoComponent
       }
     ]
   },
