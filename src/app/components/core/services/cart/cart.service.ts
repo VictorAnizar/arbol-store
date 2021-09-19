@@ -14,7 +14,19 @@ export class CartService {
   constructor() { }
 
   addCart(prod: Product){
-    this.products = [...this.products, prod];
+    // this.products = [...this.products, prod];
+    this.products.push(prod);
     this.cart.next(this.products);
+  }
+  removeCart(id){
+    for (let index = 0; index < this.products.length; index++) {
+      if (this.products[index].id==id) {
+        this.products.splice(index,1);
+        console.log("Eliminado del carrito");   
+      }  
+    }
+
+    this.cart.next(this.products);
+     
   }
 }

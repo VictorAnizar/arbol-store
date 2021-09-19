@@ -35,8 +35,9 @@ export class ProductComponent implements DoCheck, OnInit, OnDestroy{
   addCart(){
     this.cartService.addCart(this.product);
     console.log("Añadido al carrito");
-
-    // this.productClicked.emit(this.product.id);
+  }
+  removeCart(id){
+    this.cartService.removeCart(id);
   }
 
  

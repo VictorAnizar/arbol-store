@@ -9,7 +9,7 @@
     </mat-card-content>
     <mat-card-actions id="botones">
         <button id="add-cart" (click)="addCart()" mat-raised-button color="accent">Agregar al carrito</button>
-        <button id="delete-cart" (click)="ngOnDestroy()" mat-raised-button color="warn">Eliminar producto</button>
+        <button id="delete-cart" (click)="removeCart(product.id)" mat-raised-button color="warn">Eliminar producto</button>
         <button id="details" routerLink="/products/{{product.id}}" mat-raised-button>Detalles</button>
     </mat-card-actions>
 </mat-card>
