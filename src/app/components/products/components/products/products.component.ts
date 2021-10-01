@@ -23,28 +23,28 @@ export class ProductsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createProduct(){
-    const newProducto:Product ={
-      id: '222',
-      title: 'nuevo desde angular',
-      image: 'assets/images/icons8-tree-64.png',
-      price: 3000,
-      description: "Nuevo producto"
-    }
-    this.productsService.createProduct(newProducto).subscribe(product=>{
-      console.log(product);
-      
-    })
-  }
-  // updateProduct(){
-  //   const modifyProducto:Partial<Product> ={
+  // createProduct(){
+  //   const newProducto:Product ={
   //     id: '222',
-  //     title: 'modificado desde angular',
+  //     title: 'nuevo desde angular',
   //     image: 'assets/images/icons8-tree-64.png',
+  //     price: 3000,
+  //     description: "Nuevo producto"
   //   }
-  //   this.productsService.updateProduct(2,modifyProducto).subscribe(product=>{
+  //   this.productsService.createProduct(newProducto).subscribe(product=>{
   //     console.log(product);
       
   //   })
   // }
+  // // updateProduct(){
+  // //   const modifyProducto:Partial<Product> ={
+  // //     id: '222',
+  // //     title: 'modificado desde angular',
+  // //     image: 'assets/images/icons8-tree-64.png',
+  // //   }
+  // //   this.productsService.updateProduct(2,modifyProducto).subscribe(product=>{
+  // //     console.log(product);
+      
+  // //   })
+  // // }
 }

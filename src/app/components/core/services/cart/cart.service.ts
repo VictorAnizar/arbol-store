@@ -9,8 +9,8 @@ export class CartService {
 
   private products: Product[]=[];
   //el carrito inicia en 0 prods
-  private cart = new BehaviorSubject<Product[]>([]);
-  cart$= this.cart.asObservable();
+  private cart = new BehaviorSubject<Product[]>([]);// Behavior indica que el carro puede ser usado por otros elementos pero no editable
+  cart$= this.cart.asObservable();//Observavle es para que se pueda usar asincoranemte
   constructor() { }
 
   addCart(prod: Product){

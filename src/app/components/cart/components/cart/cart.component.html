@@ -1,0 +1,40 @@
+<h1>Checkout</h1>
+<mat-stepper #stepper>
+    <mat-step>
+        <ng-template matStepLabel>Your Order</ng-template>
+        <div id="tu-carrito">
+            
+            <h1>Tus productos</h1>
+            <p *ngIf="(productos$  | async).length==0 ">No hay productos</p>
+            <div *ngFor="let prod of (productos$ | async) ">
+                <h1>{{prod.title}}</h1>
+            </div>
+        </div>
+       
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Your Data Ship</ng-template>
+        <form>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl" required>
+            </mat-form-field>
+
+        </form>
+      
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Your Data Payment</ng-template>
+        <form>
+
+            <mat-form-field appearance="fill">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="Ex. 1 Main St, New York, NY" formControlName="secondCtrl" required>
+            </mat-form-field>
+
+        </form>
+       
+    </mat-step>
+    
+</mat-stepper>

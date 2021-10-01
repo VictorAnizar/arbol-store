@@ -33,7 +33,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 // import { MatCardModule } from '@angular/material/card';
-
+//steper
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [],
@@ -58,7 +59,8 @@ import { MatTableModule } from '@angular/material/table';
     MatPaginatorModule,
     MatSortModule,
     MatExpansionModule,
-    MatTabsModule   
+    MatTabsModule, 
+    MatStepperModule  
   ],
   exports: [
     MatButtonModule, 
@@ -80,7 +82,9 @@ import { MatTableModule } from '@angular/material/table';
     MatPaginatorModule,
     MatSortModule, 
     MatExpansionModule,
-    MatTabsModule
-  ]
+    MatTabsModule,
+    MatStepperModule,
+  ],
+  
 })
 export class MaterialModule { }
