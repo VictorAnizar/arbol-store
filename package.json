@@ -4,9 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --output-path dist --base-href /arbol-store/",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "homepage": "http://VictorAnizar.github.io/arbol-store",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "private": true,
   "dependencies": {
@@ -32,6 +35,7 @@
     "@angular/compiler-cli": "~12.1.0",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
+    "gh-pages": "^3.2.3",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

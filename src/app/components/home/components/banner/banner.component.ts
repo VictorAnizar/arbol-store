@@ -9,9 +9,9 @@ import Swiper from 'swiper';
 export class BannerComponent implements OnInit, AfterViewInit {
   mySwiper: Swiper;
   images: string[] = [
-    '../../../assets/images/banner-1.webp', 
-    '../../../assets/images/banner-2.webp', 
-    '../../../assets/images/banner-3.webp'
+    'assets/images/banner-1.webp', 
+    'assets/images/banner-2.webp', 
+    'assets/images/banner-3.webp'
   ];
   constructor() { }
 
